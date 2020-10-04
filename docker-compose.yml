@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  backend:
+    build: backend
+    image: "assignment6-backend"
+    container_name: assignment6-backend
+    ports:
+      - 8080:8080
+  web-app:
+    build: web-app
+    image: "assignment6-webapp"
+    container_name: web-app
+    stdin_open: true
+    ports:
+      - 3000:3000
